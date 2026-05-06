@@ -1,17 +1,21 @@
 package com.mundial.servicio;
 
-import com.mundial.dao.pruebadao;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.mundial.dao.equipodao;
+import com.mundial.modelo.equipos;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 @Service
 public class EquipoService {
 
-    @Autowired
-    private pruebadao dao;
+    
+    private final equipodao equipodao;
 
-    public void testConexion() {
-        System.out.println("Entró al service ⚙️");
-        dao.probarConexion();
-    }
+   public EquipoService(equipodao equipodao){
+    this.equipodao = equipodao;
+   }
+
+   public List<equipos> listarEquipos(){
+    return equipodao.listarEquipos();
+   }
 }
