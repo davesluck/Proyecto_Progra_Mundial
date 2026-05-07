@@ -2,7 +2,51 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Equipos</title>
-</head>
-
+    <title>Jugadores</title>
+</head> 
+<body>
+    <h1>Lista de Jugadores del Mundial</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Equipo</th>
+                <th>Nombre</th>
+                <th>Posición</th>
+                <th>ATK</th>
+                <th>DEF</th>
+                <th>MOV</th>
+                <th>SER</th>
+                <th>POR</th>
+                <th>Goles</th>
+                <th>Atajadas</th>
+                <th>T. Amarillas</th>
+                <th>T. Rojas</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="jugador : ${jugadores}">
+                <td th:text="${jugador.idJugador}"></td>
+                <td th:text="${jugador.idEquipo}"></td>
+                <td th:text="${jugador.nombreJugador}"></td>
+                <td th:text="${jugador.posicionJugador}"></td>
+                <td th:text="${jugador.ataque}"></td>
+                <td th:text="${jugador.defensa}"></td>
+                <td th:text="${jugador.movimiento}"></td>
+                <td th:text="${jugador.serenidad}"></td>
+                <td th:text="${jugador.porteria}"></td>
+                <td th:text="${jugador.golesAnotados}"></td>
+                <td th:text="${jugador.golesDetenidos}"></td>
+                <td th:text="${jugador.tarjetasAmarillas}"></td>
+                <td th:text="${jugador.tarjetasRojas}"></td>
+                <td>
+                    <span th:if="${jugador.lesionado}" class="status-bad">Lesionado </span>
+                    <span th:if="${jugador.suspendido}" class="status-bad">Suspendido </span>
+                    <span th:if="${!jugador.lesionado and !jugador.suspendido}" class="status-good">Disponible</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>  
+</body>  
 </html>
