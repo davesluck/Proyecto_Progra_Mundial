@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 
 @Controller
-public class jugadorControl {
+public class jugadorcontrol {
     private final JugadorService jugadorService;
 
-    public jugadorControl(JugadorService jugadorService) {
+    public jugadorcontrol(JugadorService jugadorService) {
         this.jugadorService = jugadorService;
     }
 
