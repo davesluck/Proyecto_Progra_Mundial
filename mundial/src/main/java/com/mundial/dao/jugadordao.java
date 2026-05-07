@@ -15,7 +15,9 @@ public class jugadordao {
 
     public List<jugadores> listarJugadores() {
         List<jugadores> lista = new ArrayList<>();
-        String sql = "SELECT * FROM jugadores";
+        String sql = "SELECT j.*, e.nombre_pais " +
+             "FROM jugadores j " +
+             "INNER JOIN equipos e ON j.id_equipo = e.id_equipo";
 
         try (Connection conn = conexion.getConnection();
              PreparedStatement ps = conn.prepareStatement(sql);
@@ -38,6 +40,7 @@ public class jugadordao {
                 j.setTarjetasRojas(rs.getInt("tarjetas_rojas"));
                 j.setLesionado(rs.getBoolean("lesionado"));
                 j.setSuspendido(rs.getBoolean("suspendido"));
+                j.setNombrePais(rs.getString("nombre_pais"));
                 
                 lista.add(j);
             }
