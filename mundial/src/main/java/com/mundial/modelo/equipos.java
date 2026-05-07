@@ -6,17 +6,19 @@ public class equipos {
     private String nombrePais;
     private String confederacion;
     private int ranking;
+    private String nombreGrupo;
 
     //constructor
     public equipos(){}
 
     //constrcuctor con parametros
-    public equipos(int idEquipo, int idGrupo, String nombrePais, String confederacion, int ranking) {
+    public equipos(int idEquipo, int idGrupo, String nombrePais, String confederacion, int ranking, String nombreGrupo) {
         this.idEquipo = idEquipo;
         this.idGrupo = idGrupo;
         this.nombrePais = nombrePais;
         this.confederacion = confederacion;
         this.ranking = ranking;
+        this.nombreGrupo = nombreGrupo;
     }
 
     //get y set
@@ -49,5 +51,11 @@ public class equipos {
     }
     public void setRanking(int ranking) {
         this.ranking = ranking;
+    }
+    public String getNombreGrupo() {
+        return nombreGrupo;
+    }
+    public void setNombreGrupo(String nombreGrupo) {
+        this.nombreGrupo = nombreGrupo;
     }
 }
