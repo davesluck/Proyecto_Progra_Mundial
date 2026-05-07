@@ -16,10 +16,11 @@ public class jugadores {
     private int tarjetasRojas;
     private boolean lesionado;
     private boolean suspendido;
+    private String nombrePais;
 
     public jugadores(){}
 
-    public jugadores(int idJugador, int idEquipo, String nombreJugador, String posicionJugador, int ataque, int movimiento, int serenidad, int defensa, int porteria, int golesAnotados, int golesDetenidos, int tarjetasAmarillas, int tarjetasRojas, boolean lesionado, boolean suspendido){
+    public jugadores(int idJugador, int idEquipo, String nombreJugador, String posicionJugador, int ataque, int movimiento, int serenidad, int defensa, int porteria, int golesAnotados, int golesDetenidos, int tarjetasAmarillas, int tarjetasRojas, boolean lesionado, boolean suspendido, String nombrePais){
         this.idJugador = idJugador;
         this.idEquipo = idEquipo;
         this.nombreJugador = nombreJugador;
@@ -35,6 +36,7 @@ public class jugadores {
         this.tarjetasRojas = tarjetasRojas;
         this.lesionado = lesionado;
         this.suspendido = suspendido;
+        this.nombrePais = nombrePais;
     }
 
     public int getIdJugador() {
@@ -126,5 +128,11 @@ public class jugadores {
     }
     public void setSuspendido(boolean suspendido) {
         this.suspendido = suspendido;
+    }
+    public String getNombrePais() {
+        return nombrePais;
+    }
+    public void setNombrePais(String nombrePais) {
+        this.nombrePais = nombrePais;
     }
 }

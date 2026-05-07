@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Proyecto Mundial</h1>
+
+    <a th:href="@{/equipos}">
+        <button class="btn">Ver Equipos</button>
+    </a>
+    <a th:href="@{/jugador}">
+        <button class="btn">Ver Jugadores</button>
+    </a>
+
+</body>
+</html>

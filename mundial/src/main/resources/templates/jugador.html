@@ -4,5 +4,48 @@
     <meta charset="UTF-8">
     <title>Equipos</title>
 </head>
+<body>
 
+    <a th:href="@{/}">
+    <button>Regresar al Inicio</button>
+    </a>
+
+    <h1>Jugadores</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Equipo</th>
+            <th>Nombre</th>
+            <th>Posicion</th>
+            <th>Ataque</th>
+            <th>Movimiento</th>
+            <th>Serenidad</th>
+            <th>Defensa</th>
+            <th>Porteria</th>
+            <th>Goles Anotados</th>
+            <th>Goles Detenidos</th>
+            <th>Tarjetas Amarillas</th>
+            <th>Tarjetas Rojas</th>
+            <th>Lesionado</th>
+            <th>Suspendido</th>
+        </tr>
+        <tr th:each="jugador : ${jugadores}">
+            <td th:text="${jugador.idJugador}"></td>
+            <td th:text="${jugador.nombrePais}"></td>
+            <td th:text="${jugador.nombreJugador}"></td>
+            <td th:text="${jugador.posicionJugador}"></td>
+            <td th:text="${jugador.ataque}"></td>
+            <td th:text="${jugador.movimiento}"></td>
+            <td th:text="${jugador.serenidad}"></td>
+            <td th:text="${jugador.defensa}"></td>
+            <td th:text="${jugador.porteria}"></td>
+            <td th:text="${jugador.golesAnotados}"></td>
+            <td th:text="${jugador.golesDetenidos}"></td>
+            <td th:text="${jugador.tarjetasAmarillas}"></td>
+            <td th:text="${jugador.tarjetasRojas}"></td>
+            <td th:text="${jugador.isLesionado}"></td>
+            <td th:text="${jugador.isSuspendido}"></td>
+        </tr>
+    </table>
+</body>
 </html>
