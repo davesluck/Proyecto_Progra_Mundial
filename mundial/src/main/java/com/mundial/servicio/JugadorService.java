@@ -8,12 +8,14 @@ import java.util.List;
 
 @Service
 public class JugadorService {
+
     private final jugadordao jugadordao;
-    public JugadorService(jugadordao jugadordao){
+
+    public JugadorService(jugadordao jugadordao) {
         this.jugadordao = jugadordao;
     }
 
-    public List<jugadores> listarJugadores(){
+    public List<jugadores> listarJugadores() {
         return jugadordao.listarJugadores();
-}
+    }
 }
