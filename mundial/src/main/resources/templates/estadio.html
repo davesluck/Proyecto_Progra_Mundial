@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Estadios</title>
+</head>
+<body>
+
+    <a th:href="@{/}">
+        <button>Regresar al Inicio</button>
+    </a>
+
+    <h1>Estadios</h1>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Ciudad</th>
+            <th>Capacidad</th>
+        </tr>
+
+        <tr th:each="estadio : ${estadios}">
+            <td th:text="${estadio.idEstadio}"></td>
+
+            <td>
+                <div th:if="${estadio.imgDataEstadio != null}">
+                    <img th:src="'data:image/png;base64,' + ${estadio.imgDataEstadio}"
+                         th:alt="${estadio.imgNomEstadio}"
+                         width="100"/>
+                </div>
+                <div th:if="${estadio.imgDataEstadio == null}">
+                    <span>Sin imagen</span>
+                </div>
+            </td>
+
+            <td th:text="${estadio.nombreEstadio}"></td>
+            <td th:text="${estadio.ciudad}"></td>
+            <td th:text="${estadio.capacidad}"></td>
+        </tr>
+
+        <tr th:if="${#lists.isEmpty(estadios)}">
+            <td colspan="5">No hay estadios registrados.</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

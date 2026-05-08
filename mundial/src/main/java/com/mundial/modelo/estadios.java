@@ -5,19 +5,19 @@ public class estadios {
     private String nombreEstadio;
     private String ciudad;
     private int capacidad;
-    private String imgNomEstadio;
-    private String imgDataEstadio;
+    private String imagen_nom_estadios;
+    private String imagen_data_estadios;
 
     //Constructor vacío
     public estadios(){}
     //Constructor con parámetros
-    public estadios(int idEstadio, String nombreEstadio, String ciudad, int capacidad, String imgNomEstadio, String imgDataEstadio){
+    public estadios(int idEstadio, String nombreEstadio, String ciudad, int capacidad, String imagen_nom_estadios, String imagen_data_estadios){
         this.idEstadio = idEstadio;
         this.nombreEstadio = nombreEstadio;
         this.ciudad = ciudad;
         this.capacidad = capacidad;
-        this.imgNomEstadio = imgNomEstadio;
-        this.imgDataEstadio = imgDataEstadio;
+        this.imagen_nom_estadios = imagen_nom_estadios;
+        this.imagen_data_estadios = imagen_data_estadios;
     }
 
     //Getters y Setters
@@ -46,16 +46,16 @@ public class estadios {
         this.capacidad = capacidad;
     }
     public String getImgNomEstadio() {
-        return imgNomEstadio;
+        return imagen_nom_estadios;
     }
     public void setImgNomEstadio(String imgNomEstadio) {
-        this.imgNomEstadio = imgNomEstadio;
+        this.imagen_nom_estadios = imgNomEstadio;
     }
     public String getImgDataEstadio() {
-        return imgDataEstadio;
+        return imagen_data_estadios;
     }
     public void setImgDataEstadio(String imgDataEstadio) {
-        this.imgDataEstadio = imgDataEstadio;
+        this.imagen_data_estadios = imgDataEstadio;
     }
     
 }
